@@ -1,0 +1,47 @@
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\pbo project.exe.config
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\pbo project.exe
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\pbo project.pdb
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo project.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo project.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.Form1.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.Properties.Resources.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo project.csproj.GenerateResource.cache
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo project.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo project.csproj.CopyComplete
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo project.exe
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo project.pdb
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\Npgsql.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Buffers.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Collections.Immutable.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Memory.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Text.Json.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Threading.Channels.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.ValueTuple.dll
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\Npgsql.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Buffers.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Collections.Immutable.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Memory.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Text.Json.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Threading.Channels.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\System.ValueTuple.xml
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up_salah.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.splash.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.menu_pegawai_1.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.transaksi.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up_kosong.resources
