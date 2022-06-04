@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pbo_project
 {
-    public partial class splash : Form
+    public partial class splashpgw : Form
     {
-        public splash()
+        public splashpgw()
         {
             InitializeComponent();
         }

@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace pbo_project
+namespace pbo_project.pop_up
 {
-    public partial class menu_pegawai_1 : Form
+    public partial class pop_up_delete_gagal : Form
     {
-        public menu_pegawai_1()
+        public pop_up_delete_gagal()
         {
             InitializeComponent();
-        }
-
-        private void kryptonButton1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            transaksi trx = new transaksi();   
-            trx.Show();
         }
     }
 }

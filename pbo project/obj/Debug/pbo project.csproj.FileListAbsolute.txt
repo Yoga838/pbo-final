@@ -5,7 +5,6 @@ C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\ComponentFactory.
 C:\Users\LENOVO\source\repos\pbo project\pbo project\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo project.csproj.AssemblyReference.cache
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo project.csproj.SuggestedBindingRedirects.cache
-C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.Form1.resources
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.Properties.Resources.resources
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo project.csproj.GenerateResource.cache
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo project.csproj.CoreCompileInputs.cache
@@ -45,3 +44,13 @@ C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.splas
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.menu_pegawai_1.resources
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.transaksi.resources
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up_kosong.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.mnadmin.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.splashpgw.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.Login.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.mnakun.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up_user_berhasil.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up_user_salah.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up.pop_up_delete_gagal.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up.pop_up_delete.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up.pop_up_fail_edit.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up.pop_up_scs_edit.resources

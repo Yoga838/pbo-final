@@ -59,6 +59,7 @@
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -95,55 +96,133 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs">
+    <Compile Include="Masuk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Masuk.Designer.cs">
+      <DependentUpon>Masuk.cs</DependentUpon>
     </Compile>
-    <Compile Include="menu pegawai 1.cs">
+    <Compile Include="menu pegawai\menu pegawai 1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menu pegawai 1.Designer.cs">
+    <Compile Include="menu pegawai\menu pegawai 1.Designer.cs">
       <DependentUpon>menu pegawai 1.cs</DependentUpon>
     </Compile>
-    <Compile Include="pop up kosong.cs">
+    <Compile Include="menu admin\mnadmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pop up kosong.Designer.cs">
+    <Compile Include="menu admin\mnadmin.Designer.cs">
+      <DependentUpon>mnadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu admin\mnakun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu admin\mnakun.Designer.cs">
+      <DependentUpon>mnakun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop up\pop delete gagal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop up\pop delete gagal.Designer.cs">
+      <DependentUpon>pop delete gagal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop up\pop up delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop up\pop up delete.Designer.cs">
+      <DependentUpon>pop up delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop up\pop up fail edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop up\pop up fail edit.Designer.cs">
+      <DependentUpon>pop up fail edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop up\pop up kosong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop up\pop up kosong.Designer.cs">
       <DependentUpon>pop up kosong.cs</DependentUpon>
     </Compile>
-    <Compile Include="pop up salah.cs">
+    <Compile Include="pop up\pop up salah.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pop up salah.Designer.cs">
+    <Compile Include="pop up\pop up salah.Designer.cs">
       <DependentUpon>pop up salah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop up\pop up scs edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop up\pop up scs edit.Designer.cs">
+      <DependentUpon>pop up scs edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop up\pop up user berhasil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop up\pop up user berhasil.Designer.cs">
+      <DependentUpon>pop up user berhasil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop up\pop up user salah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop up\pop up user salah.Designer.cs">
+      <DependentUpon>pop up user salah.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="splash.cs">
+    <Compile Include="menu admin\splash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="splash.Designer.cs">
+    <Compile Include="menu admin\splash.Designer.cs">
       <DependentUpon>splash.cs</DependentUpon>
     </Compile>
-    <Compile Include="transaksi.cs">
+    <Compile Include="menu pegawai\splashpgw.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="transaksi.Designer.cs">
+    <Compile Include="menu pegawai\splashpgw.Designer.cs">
+      <DependentUpon>splashpgw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu pegawai\transaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu pegawai\transaksi.Designer.cs">
       <DependentUpon>transaksi.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Masuk.resx">
+      <DependentUpon>Masuk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menu pegawai 1.resx">
+    <EmbeddedResource Include="menu pegawai\menu pegawai 1.resx">
       <DependentUpon>menu pegawai 1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pop up kosong.resx">
+    <EmbeddedResource Include="menu admin\mnadmin.resx">
+      <DependentUpon>mnadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu admin\mnakun.resx">
+      <DependentUpon>mnakun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop up\pop delete gagal.resx">
+      <DependentUpon>pop delete gagal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop up\pop up delete.resx">
+      <DependentUpon>pop up delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop up\pop up fail edit.resx">
+      <DependentUpon>pop up fail edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop up\pop up kosong.resx">
       <DependentUpon>pop up kosong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pop up salah.resx">
+    <EmbeddedResource Include="pop up\pop up salah.resx">
       <DependentUpon>pop up salah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop up\pop up scs edit.resx">
+      <DependentUpon>pop up scs edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop up\pop up user berhasil.resx">
+      <DependentUpon>pop up user berhasil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop up\pop up user salah.resx">
+      <DependentUpon>pop up user salah.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -154,10 +233,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="splash.resx">
+    <EmbeddedResource Include="menu admin\splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="transaksi.resx">
+    <EmbeddedResource Include="menu pegawai\splashpgw.resx">
+      <DependentUpon>splashpgw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu pegawai\transaksi.resx">
       <DependentUpon>transaksi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
