@@ -39,8 +39,7 @@ namespace pbo_project
             {
                 NpgsqlConnection con = koneksi();
                 con.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand();
-                cmd.CommandText = "insert into public.akun (username,password,jabatan)values('" + user.Text + "','" + pw.Text + "','" + rl.Text + "')";
+                NpgsqlCommand cmd = new NpgsqlCommand("insert into public.akun (username,password,jabatan)values('" + user.Text + "','" + pw.Text + "','" + rl.Text + "')", con);
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
                 con.Close();
@@ -70,8 +69,7 @@ namespace pbo_project
         {
             try
             {
-                using (NpgsqlConnection con = new NpgsqlConnection(@"server=localhost;port=5432;user id=postgres;password=Bagus383`;database=kasir;"))
-                {
+                NpgsqlConnection con = koneksi();
                     con.Open();
                     NpgsqlCommand cmd = new NpgsqlCommand("delete from akun where id_akun = '" + this.id_akun + "' ", con);
                     cmd.ExecuteNonQuery();
@@ -79,7 +77,7 @@ namespace pbo_project
                     load_data();
                     pop_up.pop_up_delete pop = new pop_up.pop_up_delete();
                     pop.Show();
-                }
+                
             }
             catch (Exception ex)
             {
@@ -114,6 +112,31 @@ namespace pbo_project
                 pop_up.pop_up_fail_edit pop = new pop_up.pop_up_fail_edit();
                 pop.Show();
             }
+        }
+
+        private void kryptonTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(kryptonTextBox1.Text != "")
+            {
+                NpgsqlConnection con = koneksi();
+                con.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand("select * from akun where username like '" + kryptonTextBox1.Text + "'",con);
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                Data_Akun.DataSource = dt;
+            }
+            else if (kryptonTextBox1.Text == "")
+            {
+                load_data();
+            }
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            barang brg = new barang();
+            brg.Show();
+            this.Close();
         }
     }
 }

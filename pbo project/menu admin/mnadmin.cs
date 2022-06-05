@@ -30,5 +30,12 @@ namespace pbo_project
             acc.Show();
             this.Close ();
         }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            barang brg = new barang();
+            brg.Show();
+            this.Close();
+        }
     }
 }

@@ -54,3 +54,6 @@ C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_u
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up.pop_up_delete.resources
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up.pop_up_fail_edit.resources
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up.pop_up_scs_edit.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.barang.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up.pop_up_barang_fail.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.pop_up.pop_up_barang_scs.resources

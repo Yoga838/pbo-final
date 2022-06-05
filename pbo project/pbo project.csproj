@@ -96,6 +96,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="menu admin\barang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu admin\barang.Designer.cs">
+      <DependentUpon>barang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Masuk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,18 @@
     </Compile>
     <Compile Include="pop up\pop delete gagal.Designer.cs">
       <DependentUpon>pop delete gagal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop up\pop up barang fail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop up\pop up barang fail.Designer.cs">
+      <DependentUpon>pop up barang fail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop up\pop up barang scs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop up\pop up barang scs.Designer.cs">
+      <DependentUpon>pop up barang scs.cs</DependentUpon>
     </Compile>
     <Compile Include="pop up\pop up delete.cs">
       <SubType>Form</SubType>
@@ -188,6 +206,9 @@
     <Compile Include="menu pegawai\transaksi.Designer.cs">
       <DependentUpon>transaksi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="menu admin\barang.resx">
+      <DependentUpon>barang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Masuk.resx">
       <DependentUpon>Masuk.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +223,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pop up\pop delete gagal.resx">
       <DependentUpon>pop delete gagal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop up\pop up barang fail.resx">
+      <DependentUpon>pop up barang fail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop up\pop up barang scs.resx">
+      <DependentUpon>pop up barang scs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pop up\pop up delete.resx">
       <DependentUpon>pop up delete.cs</DependentUpon>
