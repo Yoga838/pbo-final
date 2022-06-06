@@ -37,5 +37,12 @@ namespace pbo_project
             brg.Show();
             this.Close();
         }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            menu_admin.jenis_barang jns = new menu_admin.jenis_barang();
+            jns.Show();
+            this.Close();
+        }
     }
 }

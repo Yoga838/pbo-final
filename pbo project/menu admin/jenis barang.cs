@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
-namespace pbo_project
+namespace pbo_project.menu_admin
 {
-    public partial class barang : Form
+    public partial class jenis_barang : Form
     {
-        public barang()
+        public jenis_barang()
         {
             InitializeComponent();
             load_data();
             timer1.Start();
             date_form();
         }
-        private static NpgsqlConnection koneksi ()
+        private static NpgsqlConnection koneksi()
         {
             return new NpgsqlConnection("server=localhost;port=5432;userid=postgres;password=Bagus383`;database=kasir");
         }
@@ -28,31 +28,26 @@ namespace pbo_project
         {
             NpgsqlConnection con = koneksi();
             con.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("select * from barang", con);
+            NpgsqlCommand cmd = new NpgsqlCommand("select * from jenis", con);
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Data_Barang.DataSource = dt;
+            Data_Jenis.DataSource = dt;
         }
         void date_form()
         {
             Date.Text = DateTime.Now.ToShortDateString();
         }
-        private void kryptonButton1_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            mnakun acc = new mnakun();
-            acc.Show();
-            this.Close();
+
         }
-        public int id_barang;
-        private void Data_Barang_CellClick(object sender, DataGridViewCellEventArgs e)
+        int id_jenis;
+        private void Data_Jenis_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id_barang = Convert.ToInt32(Data_Barang.SelectedCells[0].Value);
-            nama.Text = Data_Barang.SelectedCells[1].Value.ToString();
-            harga.Text = Data_Barang.SelectedCells[2].Value.ToString();
-            stock.Text = Data_Barang.SelectedCells[3].Value.ToString();
-            supplier.Text = Data_Barang.SelectedCells[4].Value.ToString();
-            jenis.Text = Data_Barang.SelectedCells[5].Value.ToString();
+            id_jenis = Convert.ToInt32(Data_Jenis.SelectedCells[0].Value);
+            nama.Text = Data_Jenis.SelectedCells[1].Value.ToString();
+            Deskripsi.Text = Data_Jenis.SelectedCells[2].Value.ToString();
         }
 
         private void kryptonButton6_Click(object sender, EventArgs e)
@@ -61,22 +56,17 @@ namespace pbo_project
             {
                 NpgsqlConnection con = koneksi();
                 con.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("insert into barang (nama,harga,stock,id_supplier,id_jenis) values ('" + nama.Text + "','" + harga.Text + "','" + stock.Text + "','" + supplier.Text + "','" + jenis.Text + "')", con);
+                NpgsqlCommand cmd = new NpgsqlCommand("insert into jenis (nama,deskripsi) values  ('" + nama.Text + "','" + Deskripsi.Text + "')", con);
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
                 con.Close();
-                nama.Text = " ";
-                harga.Text = " ";
-                stock.Text = " ";
-                supplier.Text = " ";
-                jenis.Text = " ";
                 load_data();
-                pop_up.pop_up_barang_scs pop = new pop_up.pop_up_barang_scs();
+                pop_up.pop_up_data_scs pop = new pop_up.pop_up_data_scs();
                 pop.Show();
             }
-            catch (Exception x)
+            catch (Exception)
             {
-                pop_up.pop_up_barang_fail pop = new pop_up.pop_up_barang_fail();
+                pop_up.pop_up_data_fail pop = new pop_up.pop_up_data_fail();
                 pop.Show();
             }
         }
@@ -87,7 +77,7 @@ namespace pbo_project
             {
                 NpgsqlConnection con = koneksi();
                 con.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("delete from barang where id_barang = '" + this.id_barang + "' ", con);
+                NpgsqlCommand cmd = new NpgsqlCommand("delete from jenis where id_jenis = '" + this.id_jenis + "' ", con);
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
                 con.Close();
@@ -106,17 +96,12 @@ namespace pbo_project
         {
             try
             {
-                NpgsqlConnection con = koneksi();
-                con.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("update barang set nama = '" + nama.Text + "', harga = '" + harga.Text + "', stock = '" + stock.Text + "', id_supplier = '" + supplier.Text + "', id_jenis = '" + jenis.Text + "' where id_barang = '" + this.id_barang + "' ", con);
+                NpgsqlConnection conn = koneksi();
+                conn.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand("update jenis set nama='" + nama.Text + "', deskripsi='" + Deskripsi.Text + "' where id_jenis= '" + this.id_jenis + "' ", conn);
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
-                con.Close();
-                nama.Text = " ";
-                harga.Text = " ";
-                stock.Text = " ";
-                supplier.Text = " ";
-                jenis.Text = " ";
+                conn.Close();
                 load_data();
                 pop_up.pop_up_scs_edit pop = new pop_up.pop_up_scs_edit();
                 pop.Show();
@@ -134,11 +119,11 @@ namespace pbo_project
             {
                 NpgsqlConnection con = koneksi();
                 con.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("select * from barang where nama like '" + kryptonTextBox2.Text + "'", con);
+                NpgsqlCommand cmd = new NpgsqlCommand("select * from jenis where nama like '" + kryptonTextBox2.Text + "'", con);
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                Data_Barang.DataSource = dt;
+                Data_Jenis.DataSource = dt;
             }
             else if (kryptonTextBox2.Text == "")
             {
@@ -146,22 +131,17 @@ namespace pbo_project
             }
         }
 
-        private void kryptonButton4_Click(object sender, EventArgs e)
+        private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            Login lg = new Login();
-            lg.Show();
+            mnakun acc = new mnakun();
+            acc.Show();
             this.Close();
         }
 
-        private void kryptonTextBox2_TextChanged(object sender, EventArgs e)
+        private void kryptonButton2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void kryptonButton3_Click(object sender, EventArgs e)
-        {
-            menu_admin.jenis_barang jns = new menu_admin.jenis_barang();
-            jns.Show();
+            barang brg = new barang();
+            brg.Show();
             this.Close();
         }
     }

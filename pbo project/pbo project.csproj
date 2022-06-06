@@ -108,6 +108,12 @@
     <Compile Include="Masuk.Designer.cs">
       <DependentUpon>Masuk.cs</DependentUpon>
     </Compile>
+    <Compile Include="menu admin\jenis barang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu admin\jenis barang.Designer.cs">
+      <DependentUpon>jenis barang.cs</DependentUpon>
+    </Compile>
     <Compile Include="menu pegawai\menu pegawai 1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,18 @@
     </Compile>
     <Compile Include="pop up\pop up barang scs.Designer.cs">
       <DependentUpon>pop up barang scs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop up\pop up data fail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop up\pop up data fail.Designer.cs">
+      <DependentUpon>pop up data fail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop up\pop up data scs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop up\pop up data scs.Designer.cs">
+      <DependentUpon>pop up data scs.cs</DependentUpon>
     </Compile>
     <Compile Include="pop up\pop up delete.cs">
       <SubType>Form</SubType>
@@ -212,6 +230,9 @@
     <EmbeddedResource Include="Masuk.resx">
       <DependentUpon>Masuk.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="menu admin\jenis barang.resx">
+      <DependentUpon>jenis barang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="menu pegawai\menu pegawai 1.resx">
       <DependentUpon>menu pegawai 1.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +250,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pop up\pop up barang scs.resx">
       <DependentUpon>pop up barang scs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop up\pop up data fail.resx">
+      <DependentUpon>pop up data fail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop up\pop up data scs.resx">
+      <DependentUpon>pop up data scs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pop up\pop up delete.resx">
       <DependentUpon>pop up delete.cs</DependentUpon>
