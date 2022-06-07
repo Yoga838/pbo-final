@@ -114,6 +114,12 @@
     <Compile Include="menu admin\jenis barang.Designer.cs">
       <DependentUpon>jenis barang.cs</DependentUpon>
     </Compile>
+    <Compile Include="menu admin\supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu admin\supplier.Designer.cs">
+      <DependentUpon>supplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="menu pegawai\menu pegawai 1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menu admin\jenis barang.resx">
       <DependentUpon>jenis barang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu admin\supplier.resx">
+      <DependentUpon>supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu pegawai\menu pegawai 1.resx">
       <DependentUpon>menu pegawai 1.cs</DependentUpon>

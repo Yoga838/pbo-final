@@ -164,5 +164,17 @@ namespace pbo_project
             jns.Show();
             this.Close();
         }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            return;
+        }
+
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            menu_admin.supplier splr = new menu_admin.supplier();
+            splr.Show();
+            this.Close();
+        }
     }
 }
