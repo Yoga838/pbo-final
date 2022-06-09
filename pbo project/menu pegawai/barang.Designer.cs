@@ -115,6 +115,7 @@
             this.kryptonButton4.TabIndex = 7;
             this.kryptonButton4.Values.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(68)))), ((int)(((byte)(32)))));
             this.kryptonButton4.Values.Text = "Logout ";
+            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
             // 
             // kryptonButton1
             // 

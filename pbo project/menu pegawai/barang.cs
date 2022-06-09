@@ -56,5 +56,12 @@ namespace pbo_project.menu_pegawai
                 load_data();
             }
         }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
     }
 }

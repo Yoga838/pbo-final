@@ -144,6 +144,12 @@
     <Compile Include="menu admin\mnakun.Designer.cs">
       <DependentUpon>mnakun.cs</DependentUpon>
     </Compile>
+    <Compile Include="menu pegawai\pop up add cust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu pegawai\pop up add cust.Designer.cs">
+      <DependentUpon>pop up add cust.cs</DependentUpon>
+    </Compile>
     <Compile Include="pop up\pop delete gagal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menu admin\mnakun.resx">
       <DependentUpon>mnakun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu pegawai\pop up add cust.resx">
+      <DependentUpon>pop up add cust.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pop up\pop delete gagal.resx">
       <DependentUpon>pop delete gagal.cs</DependentUpon>
