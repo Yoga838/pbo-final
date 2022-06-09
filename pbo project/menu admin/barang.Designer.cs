@@ -371,7 +371,7 @@
             // 
             this.Data_Barang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Data_Barang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Data_Barang.Location = new System.Drawing.Point(351, 114);
+            this.Data_Barang.Location = new System.Drawing.Point(351, 109);
             this.Data_Barang.Name = "Data_Barang";
             this.Data_Barang.RowHeadersWidth = 62;
             this.Data_Barang.RowTemplate.Height = 28;
