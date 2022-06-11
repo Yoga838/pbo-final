@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.nama = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.nama = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
@@ -47,23 +47,6 @@
             this.kryptonPanel2.Size = new System.Drawing.Size(681, 341);
             this.kryptonPanel2.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(239)))), ((int)(((byte)(231)))));
             this.kryptonPanel2.TabIndex = 16;
-            // 
-            // nama
-            // 
-            this.nama.Location = new System.Drawing.Point(185, 114);
-            this.nama.Name = "nama";
-            this.nama.Size = new System.Drawing.Size(305, 27);
-            this.nama.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
-            this.nama.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.nama.StateCommon.Border.Color2 = System.Drawing.Color.DimGray;
-            this.nama.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.nama.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(68)))), ((int)(((byte)(32)))));
-            this.nama.StateCommon.Content.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nama.TabIndex = 12;
-            this.nama.Text = "Nama";
-            this.nama.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // kryptonButton1
             // 
@@ -107,6 +90,25 @@
             this.kryptonButton1.TabIndex = 14;
             this.kryptonButton1.Values.Text = "Lakukan Transaksi";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            // 
+            // nama
+            // 
+            this.nama.Location = new System.Drawing.Point(185, 114);
+            this.nama.Name = "nama";
+            this.nama.Size = new System.Drawing.Size(305, 27);
+            this.nama.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
+            this.nama.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.nama.StateCommon.Border.Color2 = System.Drawing.Color.DimGray;
+            this.nama.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.nama.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(68)))), ((int)(((byte)(32)))));
+            this.nama.StateCommon.Content.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nama.TabIndex = 12;
+            this.nama.Text = "Nama";
+            this.nama.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nama.Enter += new System.EventHandler(this.nama_Enter);
+            this.nama.Leave += new System.EventHandler(this.nama_Leave);
             // 
             // timer1
             // 

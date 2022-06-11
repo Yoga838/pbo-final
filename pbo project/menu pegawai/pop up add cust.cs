@@ -28,6 +28,22 @@ namespace pbo_project.menu_pegawai
             NpgsqlConnection con = koneksi ();
             con.Open ();
             NpgsqlCommand cmd = new NpgsqlCommand("insert into transaksi (nama,tanggal) values ('"+nama.Text+"', '"+date+"')",con);
+            cmd.ExecuteNonQuery ();
+            con.Close ();
+            this.Close();
+        }
+
+        private void nama_Enter(object sender, EventArgs e)
+        {
+            nama.Text = "";
+        }
+
+        private void nama_Leave(object sender, EventArgs e)
+        {
+            if (nama.Text == "")
+            {
+                nama.Text = "Nama";
+            }
         }
     }
 }

@@ -34,7 +34,7 @@ namespace pbo_project
         }
         int id_barang;
         int stock;
-        private void databarang_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Data_Barang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (Convert.ToInt32(Data_Barang.SelectedCells[3].Value.ToString()) == 0)
             {
@@ -54,24 +54,25 @@ namespace pbo_project
         {
             menu_pegawai.pop_up_add_cust pop = new menu_pegawai.pop_up_add_cust();
             pop.Show();
+            kuantitas.Enabled = true;
         }
-        int n = 0;
         int total1;
         private void kryptonButton6_Click(object sender, EventArgs e)
         {
             if (Convert.ToInt32(kuantitas.Text) <= stock)
             {
-                n++;
                 int total = Convert.ToInt32(kuantitas.Text) * Convert.ToInt32(harga.Text);
                 total1 = total + total1;
                 DataGridViewRow dr = new DataGridViewRow();
-                dr.CreateCells(Data_Transaksi);
-                dr.Cells[0].Value = n + 1;
+                dr.CreateCells(databarang);
+                dr.Cells[0].Value = id_barang ;
                 dr.Cells[1].Value = nama.Text;
                 dr.Cells[2].Value = harga.Text;
                 dr.Cells[3].Value = kuantitas.Text;
-                Data_Transaksi.Rows.Add(dr);
-                total_lbl.Text = "Rp. " + total_lbl.ToString();
+                databarang.Rows.Add(dr);
+                total_lbl.Text = "Rp. " + total1.ToString();
+                update_item();
+                append_detail();
                 load_data();
                 nama.Text = "";
                 harga.Text = "";
@@ -83,19 +84,28 @@ namespace pbo_project
             }
         }
         int id;
-        private void get_id(int a)
+        private void get_id()
         {
             NpgsqlConnection con = koneksi();
             con.Open();
             NpgsqlCommand cmd = con.CreateCommand();
             string query = "select id_transaksi from transaksi order by id_transaksi desc limit 1 ";
             cmd.CommandText = query;
-            a = Convert.ToInt32(cmd.ExecuteScalar());
+            id = Convert.ToInt32(cmd.ExecuteScalar());
+            con.Close();
+        }
+        private void append_detail()
+        {
+            get_id();
+            NpgsqlConnection con = koneksi();
+            con.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("insert into detail_transaksi(id_transaksi,nama,harga,kuantitas) values ('"+this.id+"','"+nama.Text+"','"+harga.Text+"','"+kuantitas.Text+"')", con);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
             con.Close();
         }
         private void update_item()
         {
-            get_id(id);
             int jumlah = stock - Convert.ToInt32(kuantitas.Text);
             NpgsqlConnection con = koneksi();
             con.Open();
@@ -103,6 +113,87 @@ namespace pbo_project
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
+        }
+        private void kuantitas_Enter(object sender, EventArgs e)
+        {
+            kuantitas.Text = "";
+        }
+
+        private void kuantitas_Leave(object sender, EventArgs e)
+        {
+            if (kuantitas.Text == "")
+            {
+                kuantitas.Text = "Kuantitas";
+            }
+        }
+        int tempid;
+        int bckstck;
+        string name;
+        private void databarang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tempid = Convert.ToInt32(databarang.SelectedCells[0].Value);
+            bckstck = Convert.ToInt32(databarang.SelectedCells[3].Value);
+            name = databarang.SelectedCells[1].Value.ToString();
+           
+        }
+        int newstock;
+        void getstock()
+        {
+            NpgsqlConnection con = koneksi();
+            con.Open();
+            NpgsqlCommand cmd = con.CreateCommand();
+            string query = "select stock from barang where id_barang = '"+this.tempid+"'";
+            cmd.CommandText = query;
+            newstock = Convert.ToInt32(cmd.ExecuteScalar());
+            con.Close();
+        }
+
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            getstock();
+            int totalbck = newstock + bckstck;
+            int price = Convert.ToInt32(databarang.SelectedCells[2].Value) * bckstck;
+            total1 = total1 - price;
+            NpgsqlConnection con = koneksi();
+            con.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("update barang set stock ='" + totalbck + "' where id_barang = '" + this.tempid + "'", con);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+            total_lbl.Text = "Rp. " + total1.ToString();
+            load_data();
+            unappend_detail();
+            int rowIndex = databarang.CurrentCell.RowIndex;
+            databarang.Rows.RemoveAt(rowIndex);
+        }
+        private void unappend_detail ()
+        {
+            NpgsqlConnection con = koneksi();
+            con.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("Delete from detail_transaksi where nama = '"+this.name+"'and id_transaksi = '"+this.id+"'", con);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+        }
+
+        private void bayar_Enter(object sender, EventArgs e)
+        {
+            bayar.Text = "";
+        }
+
+        private void bayar_Leave(object sender, EventArgs e)
+        {
+            if (bayar.Text == "")
+            {
+                bayar.Text = "bayar";
+            }
+        }
+
+        private void bayar_TextChanged(object sender, EventArgs e)
+        {
+            int pay = Convert.ToInt32(bayar.Text);
+            int rumus = pay - total1;
+            kembalian.Text = rumus.ToString();
         }
     }
 }
