@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Npgsql;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
 
 namespace pbo_project
 {
@@ -18,7 +12,7 @@ namespace pbo_project
             InitializeComponent();
             load_data();
         }
-        private static NpgsqlConnection koneksi ()
+        private static NpgsqlConnection koneksi()
         {
             return new NpgsqlConnection("server=localhost;port=5432;user id=postgres;password=Bagus383`;database=kasir;");
         }
@@ -65,7 +59,7 @@ namespace pbo_project
                 total1 = total + total1;
                 DataGridViewRow dr = new DataGridViewRow();
                 dr.CreateCells(databarang);
-                dr.Cells[0].Value = id_barang ;
+                dr.Cells[0].Value = id_barang;
                 dr.Cells[1].Value = nama.Text;
                 dr.Cells[2].Value = harga.Text;
                 dr.Cells[3].Value = kuantitas.Text;
@@ -99,7 +93,7 @@ namespace pbo_project
             get_id();
             NpgsqlConnection con = koneksi();
             con.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("insert into detail_transaksi(id_transaksi,nama,harga,kuantitas) values ('"+this.id+"','"+nama.Text+"','"+harga.Text+"','"+kuantitas.Text+"')", con);
+            NpgsqlCommand cmd = new NpgsqlCommand("insert into detail_transaksi(id_transaksi,nama,harga,kuantitas) values ('" + this.id + "','" + nama.Text + "','" + harga.Text + "','" + kuantitas.Text + "')", con);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
@@ -134,7 +128,7 @@ namespace pbo_project
             tempid = Convert.ToInt32(databarang.SelectedCells[0].Value);
             bckstck = Convert.ToInt32(databarang.SelectedCells[3].Value);
             name = databarang.SelectedCells[1].Value.ToString();
-           
+
         }
         int newstock;
         void getstock()
@@ -142,7 +136,7 @@ namespace pbo_project
             NpgsqlConnection con = koneksi();
             con.Open();
             NpgsqlCommand cmd = con.CreateCommand();
-            string query = "select stock from barang where id_barang = '"+this.tempid+"'";
+            string query = "select stock from barang where id_barang = '" + this.tempid + "'";
             cmd.CommandText = query;
             newstock = Convert.ToInt32(cmd.ExecuteScalar());
             con.Close();
@@ -166,11 +160,11 @@ namespace pbo_project
             int rowIndex = databarang.CurrentCell.RowIndex;
             databarang.Rows.RemoveAt(rowIndex);
         }
-        private void unappend_detail ()
+        private void unappend_detail()
         {
             NpgsqlConnection con = koneksi();
             con.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("Delete from detail_transaksi where nama = '"+this.name+"'and id_transaksi = '"+this.id+"'", con);
+            NpgsqlCommand cmd = new NpgsqlCommand("Delete from detail_transaksi where nama = '" + this.name + "'and id_transaksi = '" + this.id + "'", con);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
@@ -188,12 +182,52 @@ namespace pbo_project
                 bayar.Text = "bayar";
             }
         }
-
-        private void bayar_TextChanged(object sender, EventArgs e)
+        int id_acc;
+        public static string namapgw;
+        void get_acc_info()
         {
-            int pay = Convert.ToInt32(bayar.Text);
-            int rumus = pay - total1;
-            kembalian.Text = rumus.ToString();
+            string username = namapgw;
+            NpgsqlConnection conn = koneksi();
+            conn.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("select id_akun from akun where username = '" + username + "'", conn);
+            id_acc = Convert.ToInt32(cmd.ExecuteScalar());
+            conn.Close();
+        }
+        private void kryptonButton8_Click(object sender, EventArgs e)
+        {
+            int kembalian = Convert.ToInt32(bayar.Text) - total1;
+            menu_pegawai.pop_up_bayar.kembali = "kembaliannya " + kembalian.ToString();
+            kuantitas.Enabled = false;
+            get_acc_info();
+            using (NpgsqlConnection conn = koneksi())
+            {
+                conn.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand("insert into jumlah (id_transaksi, id_pegawai, jumlah) values ('" + this.id + "', '" + this.id_acc + "', '" + total1 + "')", conn);
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                conn.Close();
+            }
+            databarang.Rows.Clear();
+            total_lbl.Text = "Total";
+            this.total1 = 0;
+            this.id = 0;
+            bayar.Text = "";
+            menu_pegawai.pop_up_bayar paying = new menu_pegawai.pop_up_bayar();
+            paying.Show();
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.Show();
+            this.Close();
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            menu_pegawai.barang barang = new menu_pegawai.barang();
+            barang.Show();
+            this.Close();
         }
     }
 }

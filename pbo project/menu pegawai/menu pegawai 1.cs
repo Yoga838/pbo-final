@@ -30,5 +30,12 @@ namespace pbo_project
             lg.Show();
             this.Close();
         }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            menu_pegawai.barang barang = new menu_pegawai.barang();
+            barang.Show();
+            this.Close();
+        }
     }
 }

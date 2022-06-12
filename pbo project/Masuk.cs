@@ -15,6 +15,7 @@ namespace pbo_project
         {
             return new NpgsqlConnection("server=localhost;port=5432;user id=postgres;password=Bagus383`;database=kasir;");
         }
+        
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             using (NpgsqlConnection con = koneksi())
@@ -36,6 +37,7 @@ namespace pbo_project
                     }
                     else
                     {
+                        transaksi.namapgw = username.Text;
                         splashpgw sp = new splashpgw();
                         sp.Show();
                         con.Close();

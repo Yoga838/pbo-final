@@ -150,6 +150,12 @@
     <Compile Include="menu pegawai\pop up add cust.Designer.cs">
       <DependentUpon>pop up add cust.cs</DependentUpon>
     </Compile>
+    <Compile Include="menu pegawai\pop up bayar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu pegawai\pop up bayar.Designer.cs">
+      <DependentUpon>pop up bayar.cs</DependentUpon>
+    </Compile>
     <Compile Include="pop up\pop delete gagal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menu pegawai\pop up add cust.resx">
       <DependentUpon>pop up add cust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu pegawai\pop up bayar.resx">
+      <DependentUpon>pop up bayar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pop up\pop delete gagal.resx">
       <DependentUpon>pop delete gagal.cs</DependentUpon>

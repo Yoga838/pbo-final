@@ -50,7 +50,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bayar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kembalian = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -138,6 +137,7 @@
             this.kryptonButton4.TabIndex = 7;
             this.kryptonButton4.Values.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(68)))), ((int)(((byte)(32)))));
             this.kryptonButton4.Values.Text = "Logout ";
+            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
             // 
             // kryptonButton1
             // 
@@ -258,6 +258,7 @@
             this.kryptonButton2.TabIndex = 1;
             this.kryptonButton2.Values.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(68)))), ((int)(((byte)(32)))));
             this.kryptonButton2.Values.Text = "> Barang";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // kryptonButton5
             // 
@@ -421,7 +422,7 @@
             // 
             this.kryptonButton6.Location = new System.Drawing.Point(343, 535);
             this.kryptonButton6.Name = "kryptonButton6";
-            this.kryptonButton6.Size = new System.Drawing.Size(267, 46);
+            this.kryptonButton6.Size = new System.Drawing.Size(267, 60);
             this.kryptonButton6.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -462,7 +463,7 @@
             // 
             this.kryptonButton7.Location = new System.Drawing.Point(616, 535);
             this.kryptonButton7.Name = "kryptonButton7";
-            this.kryptonButton7.Size = new System.Drawing.Size(233, 49);
+            this.kryptonButton7.Size = new System.Drawing.Size(251, 60);
             this.kryptonButton7.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -568,28 +569,8 @@
             this.bayar.TabIndex = 16;
             this.bayar.Text = "Bayar";
             this.bayar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bayar.TextChanged += new System.EventHandler(this.bayar_TextChanged);
             this.bayar.Enter += new System.EventHandler(this.bayar_Enter);
             this.bayar.Leave += new System.EventHandler(this.bayar_Leave);
-            // 
-            // kembalian
-            // 
-            this.kembalian.Enabled = false;
-            this.kembalian.Location = new System.Drawing.Point(967, 448);
-            this.kembalian.Name = "kembalian";
-            this.kembalian.Size = new System.Drawing.Size(189, 27);
-            this.kembalian.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
-            this.kembalian.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.kembalian.StateCommon.Border.Color2 = System.Drawing.Color.DimGray;
-            this.kembalian.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kembalian.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kembalian.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(68)))), ((int)(((byte)(32)))));
-            this.kembalian.StateCommon.Content.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kembalian.TabIndex = 26;
-            this.kembalian.Text = "Kembalian";
-            this.kembalian.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // kryptonButton8
             // 
@@ -630,6 +611,7 @@
             this.kryptonButton8.TabIndex = 27;
             this.kryptonButton8.Values.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(68)))), ((int)(((byte)(32)))));
             this.kryptonButton8.Values.Text = "Bayar Sekarang";
+            this.kryptonButton8.Click += new System.EventHandler(this.kryptonButton8_Click);
             // 
             // transaksi
             // 
@@ -638,7 +620,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1328, 645);
             this.Controls.Add(this.kryptonButton8);
-            this.Controls.Add(this.kembalian);
             this.Controls.Add(this.bayar);
             this.Controls.Add(this.databarang);
             this.Controls.Add(this.kryptonButton7);
@@ -688,7 +669,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox bayar;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kembalian;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton8;
     }
 }

@@ -63,5 +63,12 @@ namespace pbo_project.menu_pegawai
             login.Show();
             this.Close();
         }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            transaksi trx = new transaksi();
+            trx.Show();
+            this.Close();
+        }
     }
 }
