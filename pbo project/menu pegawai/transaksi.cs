@@ -93,7 +93,7 @@ namespace pbo_project
             get_id();
             NpgsqlConnection con = koneksi();
             con.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("insert into detail_transaksi(id_transaksi,nama,harga,kuantitas) values ('" + this.id + "','" + nama.Text + "','" + harga.Text + "','" + kuantitas.Text + "')", con);
+            NpgsqlCommand cmd = new NpgsqlCommand("insert into detail_transaksi(id_transaksi,id_barang,nama,harga,kuantitas) values ('" + this.id + "', '"+this.id_barang+"' ,'" + nama.Text + "','" + harga.Text + "','" + kuantitas.Text + "')", con);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
@@ -227,6 +227,13 @@ namespace pbo_project
         {
             menu_pegawai.barang barang = new menu_pegawai.barang();
             barang.Show();
+            this.Close();
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            menu_pegawai.menu_rekap_data rekap = new menu_pegawai.menu_rekap_data();
+            rekap.Show();
             this.Close();
         }
     }

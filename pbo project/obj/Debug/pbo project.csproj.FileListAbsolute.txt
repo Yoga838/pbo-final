@@ -64,3 +64,5 @@ C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.menu_
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.menu_pegawai.barang.resources
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.menu_pegawai.pop_up_add_cust.resources
 C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.menu_pegawai.pop_up_bayar.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.menu_rekap_data.resources
+C:\Users\LENOVO\source\repos\pbo project\pbo project\obj\Debug\pbo_project.menu_pegawai.menu_rekap_data.resources

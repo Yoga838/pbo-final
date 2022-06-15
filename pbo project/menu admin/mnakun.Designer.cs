@@ -115,6 +115,7 @@
             this.kryptonButton5.TabIndex = 9;
             this.kryptonButton5.Values.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(68)))), ((int)(((byte)(32)))));
             this.kryptonButton5.Values.Text = "> Rekap Data";
+            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
             // kryptonButton7
             // 

@@ -37,5 +37,12 @@ namespace pbo_project
             barang.Show();
             this.Close();
         }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            menu_pegawai.menu_rekap_data rekap = new menu_pegawai.menu_rekap_data();
+            rekap.Show();
+            this.Close();
+        }
     }
 }

@@ -121,6 +121,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.kryptonPanel2);
             this.Name = "pop_up_add_cust";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "pop_up_add_cust";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);

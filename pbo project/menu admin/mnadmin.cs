@@ -47,7 +47,9 @@ namespace pbo_project
 
         private void kryptonButton5_Click(object sender, EventArgs e)
         {
-
+            menu_rekap_data rekap = new menu_rekap_data();
+            rekap.Show();
+            this.Close();
         }
 
         private void kryptonButton7_Click(object sender, EventArgs e)
