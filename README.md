@@ -1,7 +1,7 @@
 Project PBO FINAL
 
 please use database in folder database with <br>
-user id postgres
-port 5432
-password (Bagus383')
+user id postgres <br>
+port 5432 <br>
+password (Bagus383') <br>
 name database kasir
