@@ -135,5 +135,33 @@ namespace pbo_project.menu_pegawai
                 load_data();
             }
         }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            transaksi trx = new transaksi();
+            trx.Show();
+            this.Close();
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            barang brng = new barang();
+            brng.Show();
+            this.Close();
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            menu_pegawai.menu_rekap_data rekap = new menu_pegawai.menu_rekap_data();
+            rekap.Show();
+            this.Close();
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
     }
 }
