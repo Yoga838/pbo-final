@@ -393,7 +393,7 @@
             this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(68)))), ((int)(((byte)(32)))));
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.TabIndex = 11;
-            this.kryptonTextBox1.Text = "Cari Nama Toko";
+            this.kryptonTextBox1.Text = "Cari Nama Supplier";
             this.kryptonTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.kryptonTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kryptonTextBox1_KeyPress);
             // 

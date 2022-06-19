@@ -19,9 +19,9 @@ namespace pbo_project
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             transaksi trx = new transaksi();   
             trx.Show();
+            this.Close();
         }
 
         private void kryptonButton4_Click(object sender, EventArgs e)

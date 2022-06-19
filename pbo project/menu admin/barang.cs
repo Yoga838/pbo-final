@@ -33,6 +33,7 @@ namespace pbo_project
             DataTable dt = new DataTable();
             da.Fill(dt);
             Data_Barang.DataSource = dt;
+            con.Close();
         }
         void date_form()
         {
@@ -139,6 +140,7 @@ namespace pbo_project
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 Data_Barang.DataSource = dt;
+                con.Close();
             }
             else if (kryptonTextBox2.Text == "")
             {

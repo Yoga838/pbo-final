@@ -25,6 +25,8 @@ namespace pbo_project
             DataTable dt = new DataTable();
             da.Fill(dt);
             Rekap_Data.DataSource = dt;
+            con.Close();
+
         }
 
         private void kryptonTextBox2_Enter(object sender, EventArgs e)
@@ -48,6 +50,8 @@ namespace pbo_project
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 Rekap_Data.DataSource = dt;
+                con.Close();
+
             }
             else
             {
@@ -73,30 +77,36 @@ namespace pbo_project
                 da.Fill(dt);
                 Rekap_Data.DataSource = dt;
                 total_text();
+                con.Close();
+
             }
             else if (comboBox1.Text == "1 minggu")
             {
                 day = 7;
                 NpgsqlConnection con = koneksi();
                 con.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("select b.id_transaksi as id_transaksi, d.username as pegawai, b.nama as nama_pembeli,c.nama as nama_barang, b.tanggal from jumlah a join transaksi b  on (a.id_transaksi = b.id_transaksi) join detail_transaksi c on (b.id_transaksi = c.id_transaksi) join akun d on (a.id_pegawai = d.id_akun) where current_date -b.tanggal  < '" + day + "'  ", con);
+                NpgsqlCommand cmd = new NpgsqlCommand("select b.id_transaksi as id_transaksi, d.username as pegawai, b.nama as nama_pembeli,c.nama as nama_barang, b.tanggal from jumlah a join transaksi b  on (a.id_transaksi = b.id_transaksi) join detail_transaksi c on (b.id_transaksi = c.id_transaksi) join akun d on (a.id_pegawai = d.id_akun) where current_date - b.tanggal  < '" + day + "'  ", con);
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 Rekap_Data.DataSource = dt;
                 total_text0();
+                con.Close();
+
             }
             else if (comboBox1.Text == "1 bulan")
             {
                 day = 30;
                 NpgsqlConnection con = koneksi();
                 con.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("select b.id_transaksi as id_transaksi, d.username as pegawai, b.nama as nama_pembeli,c.nama as nama_barang, b.tanggal from jumlah a join transaksi b  on (a.id_transaksi = b.id_transaksi) join detail_transaksi c on (b.id_transaksi = c.id_transaksi) join akun d on (a.id_pegawai = d.id_akun) where current_date -b.tanggal  <'" + day + "'  ", con);
+                NpgsqlCommand cmd = new NpgsqlCommand("select b.id_transaksi as id_transaksi, d.username as pegawai, b.nama as nama_pembeli,c.nama as nama_barang, b.tanggal from jumlah a join transaksi b  on (a.id_transaksi = b.id_transaksi) join detail_transaksi c on (b.id_transaksi = c.id_transaksi) join akun d on (a.id_pegawai = d.id_akun) where current_date - b.tanggal  < '" + day + "'  ", con);
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 Rekap_Data.DataSource = dt;
                 total_text0();
+                con.Close();
+
             }
         }
         void total_text0()
@@ -109,6 +119,8 @@ namespace pbo_project
             {
                 total.Text = "Total " + jumlah;
             }
+            con.Close();
+
         }
         void total_text()
         {
@@ -122,6 +134,8 @@ namespace pbo_project
                 {
                     total.Text = "Total " + jumlah;
                 }
+                con.Close();
+
             }
             catch (Exception)
             {

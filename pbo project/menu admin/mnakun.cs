@@ -27,6 +27,8 @@ namespace pbo_project
             DataTable dt = new DataTable();
             da.Fill(dt);
             Data_Akun.DataSource = dt;
+            con.Close();
+
         }
         void date_form()
         {
@@ -70,14 +72,13 @@ namespace pbo_project
             try
             {
                 NpgsqlConnection con = koneksi();
-                    con.Open();
-                    NpgsqlCommand cmd = new NpgsqlCommand("delete from akun where id_akun = '" + this.id_akun + "' ", con);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    load_data();
-                    pop_up.pop_up_delete pop = new pop_up.pop_up_delete();
-                    pop.Show();
-                
+                con.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand("delete from akun where id_akun = '" + this.id_akun + "' ", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                load_data();
+                pop_up.pop_up_delete pop = new pop_up.pop_up_delete();
+                pop.Show();
             }
             catch (Exception ex)
             {
@@ -116,15 +117,17 @@ namespace pbo_project
 
         private void kryptonTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(kryptonTextBox1.Text != "")
+            if (kryptonTextBox1.Text != "")
             {
                 NpgsqlConnection con = koneksi();
                 con.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("select * from akun where username like '" + kryptonTextBox1.Text + "'",con);
+                NpgsqlCommand cmd = new NpgsqlCommand("select * from akun where username like '" + kryptonTextBox1.Text + "'", con);
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 Data_Akun.DataSource = dt;
+                con.Close();
+
             }
             else if (kryptonTextBox1.Text == "")
             {

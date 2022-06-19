@@ -34,6 +34,7 @@ namespace pbo_project.menu_admin
             DataTable dt = new DataTable();
             da.Fill(dt);
             Data_Supplier.DataSource = dt;
+            con.Close();
         }
         void date_form()
         {
@@ -51,6 +52,7 @@ namespace pbo_project.menu_admin
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 Data_Supplier.DataSource = dt;
+                con.Close();
             }
             else if (kryptonTextBox1.Text == "")
             {

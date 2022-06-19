@@ -25,6 +25,8 @@ namespace pbo_project
             DataTable dt = new DataTable();
             da.Fill(dt);
             Data_Barang.DataSource = dt;
+            con.Close();
+
         }
         int id_barang;
         int stock;
@@ -159,6 +161,7 @@ namespace pbo_project
             unappend_detail();
             int rowIndex = databarang.CurrentCell.RowIndex;
             databarang.Rows.RemoveAt(rowIndex);
+            con.Close();
         }
         private void unappend_detail()
         {
